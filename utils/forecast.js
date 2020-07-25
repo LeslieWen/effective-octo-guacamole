@@ -8,7 +8,10 @@ const forecast=(lat,long,callback)=>{
         }else if(response.body.error){
             callback("Location not found",undefined)
         }else{
-            callback(undefined,response.body.current.weather_descriptions+' It is currently '+response.body.current.temperature+'. It feels like '+response.body.current.feelslike+'.')
+            callback(undefined,{
+                location:response.body.location.name+", "+response.body.location.region+", "+response.body.location.country,
+                forecastData:"Currently "+response.body.current.weather_descriptions+'. It is currently '+response.body.current.temperature+'. It feels like '+response.body.current.feelslike+'.'
+            })
         }
     });
 }
