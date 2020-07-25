@@ -5,7 +5,10 @@ const url= "http://api.weatherstack.com/current?access_key=1cf99347ca0a03c7ed40e
 //const url = "https://api.darksky.net/forecast/0af22b7c77bddf1e717288e5e34852fe/37.8267,-122.4233";
 
 request({url:url, json:true} ,(error, response)=>{
+    console.log("Location: "+response.body.location.name)
+    console.log("Local Time: "+response.body.location.localtime)
     console.log("It is currently "+response.body.current.temperature+". It feels like "+response.body.current.feelslike+".")
-    
+
 });
+
 
