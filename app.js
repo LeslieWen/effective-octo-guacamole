@@ -18,7 +18,7 @@ if(process.argv[2]!=null){
     })
 }else{
     console.log("To query the weather of certain city, execute in terminal:")
-    console.log("node app.js \"CITY NAME\"")
+    console.log("node app.js \"CITY, PROVINCE\"")
 }
 
 
