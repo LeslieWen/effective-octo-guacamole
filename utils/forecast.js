@@ -1,7 +1,7 @@
 const request=require('request')
 
 const forecast=(lat,long,callback)=>{
-    const url="http://api.weatherstack.com/current?access_key=1cf99347ca0a03c7ed40e29ec1935609&query="+lat+","+long
+    const url="http://api.weatherstack.com/current?access_key=YOUR_ACCESS_KEY="+lat+","+long
     request({url:url, json:true} ,(error, response)=>{
         if(error){
             callback("No internet connection.",undefined)
